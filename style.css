@@ -1,0 +1,15 @@
+.navbar {
+  background-color: #f97976;
+}
+
+.navbar-brand {
+  color: #fff;
+}
+
+.nav-btn {
+  margin-left: 8px;
+}
+
+.nav-btn:hover {
+  color: #f97976;
+}
