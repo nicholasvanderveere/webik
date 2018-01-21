@@ -106,6 +106,23 @@ body {
     font-size: 25px
 }
 
+#question {
+  color: coral;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 40px;
+}
+.question-label {
+  color: coral;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 20px;
+}
+
 #answer {
-  
+  color: coral;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 20px;
+  font-size: 25px;
 }
