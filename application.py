@@ -121,3 +121,56 @@ def register():
 
     else:
         return render_template("register.html")
+
+@app.route("/play", methods = ["GET", “POST”])
+def play():
+    if request.method == “POST”:
+
+    return render_template("play.html")
+
+@app.route("/question", methods = ["GET", "POST"])
+def question():
+    # user is on question page and selects an answer
+    if request.method == "POST":
+        # renders question.html again with new question
+        # function located in helpers.py
+        generate_question()
+
+    if request.method == "GET":
+        return render_template("question.html")
+
+@app.route(“/create”, methods = [“GET”, “POST”]
+def create():
+    # user clicks one of the buttons
+    if request.method == “POST”:
+        # use HTML buttons with the ‘name’ and ‘value’ attributes
+        if request.form[“choice”] == “create”:
+            return render_template(“create_question.html”)
+        elif request.form[“choice”] == “rate”:
+            return render_template(“rate_question.html”)
+    if request.method == “GET”:
+        return render_template(“create.html”)
+
+@app.route(“/create_question”, methods = [“GET”, “POST”]
+def create_question():
+    # user clicks on submit button
+    if request.method == “POST”:
+        “””
+        Store user entry in database
+        “””
+        return redirect(url_for(“create_question”))
+
+    if request.method == “GET”:
+        return render_template(“create.html”)
+
+@app.route(“leaderboards”, methods = [“GET”]
+def leaderboards():
+    render_template(“leaderboards.html”)
+
+@app.route(“profile”, methods = [“GET”, “POST”]
+def profile():
+    if request.method == “POST”
+        # user wants to change profile information
+        return render_template(“settings.html”)
+    if request.method == “GET”:
+        return render_template(“profile.html”)
