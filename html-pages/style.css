@@ -126,3 +126,11 @@ body {
   margin-top: 20px;
   font-size: 25px;
 }
+
+#quote
+{
+  display: block;
+  color: coral;
+  margin-top: 150px;
+  font-size: 25px
+}
